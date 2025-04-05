@@ -1,58 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+<!--head-->
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Audio Player</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        h1 {
-            color: #333;
-        }
-        input {
-            padding: 10px;
-            font-size: 16px;
-            margin-bottom: 10px;
-            width: 300px;
-            max-width: 100%;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>web</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
+
+<!-- main -->
+
+
 <body>
-    <h1>YouTube Audio Player</h1>
-    <input type="text" id="youtubeLink" placeholder="Enter YouTube link">
-    <button onclick="playAudio()">Play Audio</button>
-    <div id="audioContainer" style="margin-top: 20px;"></div>
 
-    <script>
-        function playAudio() {
-            const link = document.getElementById('youtubeLink').value;
-            const videoId = new URLSearchParams(new URL(link).search).get('v');
-            const embedLink = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1`;
+  <h1>bilota</h1>
 
-            const audioContainer = document.getElementById('audioContainer');
-            audioContainer.innerHTML = `<iframe width="300" height="50" src="${embedLink}" frameborder="0" allow="autoplay" allowfullscreen></iframe>`;
-        }
-    </script>
+
+
+
 </body>
+
 </html>
