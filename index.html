@@ -47,11 +47,11 @@
     <script>
         function playAudio() {
             const link = document.getElementById('youtubeLink').value;
-            const videoId = link.split('v=')[1].split('&')[0];
-            const embedLink = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3`;
+            const videoId = new URLSearchParams(new URL(link).search).get('v');
+            const embedLink = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&rel=0&modestbranding=1`;
 
             const audioContainer = document.getElementById('audioContainer');
-            audioContainer.innerHTML = `<iframe width="0" height="0" src="${embedLink}" frameborder="0" allow="autoplay" allowfullscreen></iframe>`;
+            audioContainer.innerHTML = `<iframe width="300" height="50" src="${embedLink}" frameborder="0" allow="autoplay" allowfullscreen></iframe>`;
         }
     </script>
 </body>
